@@ -25,6 +25,8 @@
 		A623F4EE1C8F6572002B5893 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A623F4EB1C8F6572002B5893 /* Bolts.framework */; };
 		A623F4EF1C8F6572002B5893 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A623F4EC1C8F6572002B5893 /* FBSDKCoreKit.framework */; };
 		A623F4F01C8F6572002B5893 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A623F4ED1C8F6572002B5893 /* FBSDKLoginKit.framework */; };
+		A63D07CC1C90C73200789F05 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63D07CB1C90C73200789F05 /* FeedVC.swift */; };
+		A63D07CE1C90C7F800789F05 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63D07CD1C90C7F800789F05 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		A623F4EB1C8F6572002B5893 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A623F4EC1C8F6572002B5893 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A623F4ED1C8F6572002B5893 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A63D07CB1C90C73200789F05 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		A63D07CD1C90C7F800789F05 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		ACA873A08C1CCCC19B07C2F1 /* Pods-devslopes-showcase-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-showcase-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-showcase-app/Pods-devslopes-showcase-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +125,7 @@
 				A623F4D61C8DFC07002B5893 /* View */,
 				A623F4D51C8DFC00002B5893 /* Controller */,
 				A623F4C31C8DFB8F002B5893 /* AppDelegate.swift */,
+				A623F4C71C8DFB8F002B5893 /* Main.storyboard */,
 				A623F4CA1C8DFB8F002B5893 /* Assets.xcassets */,
 				A623F4CC1C8DFB8F002B5893 /* LaunchScreen.storyboard */,
 				A623F4CF1C8DFB8F002B5893 /* Info.plist */,
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A623F4C51C8DFB8F002B5893 /* ViewController.swift */,
+				A63D07CB1C90C73200789F05 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -139,10 +145,10 @@
 		A623F4D61C8DFC07002B5893 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A623F4C71C8DFB8F002B5893 /* Main.storyboard */,
 				A623F4E11C8DFE65002B5893 /* MaterialView.swift */,
 				A623F4E61C8E02F3002B5893 /* MaterialButton.swift */,
 				A623F4E81C8E057C002B5893 /* MaterialTextField.swift */,
+				A63D07CD1C90C7F800789F05 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -314,6 +320,8 @@
 				A61B4DF21C8FA7B400014B1C /* DataService.swift in Sources */,
 				A623F4E21C8DFE65002B5893 /* MaterialView.swift in Sources */,
 				A623F4C61C8DFB8F002B5893 /* ViewController.swift in Sources */,
+				A63D07CC1C90C73200789F05 /* FeedVC.swift in Sources */,
+				A63D07CE1C90C7F800789F05 /* PostCell.swift in Sources */,
 				A623F4C41C8DFB8F002B5893 /* AppDelegate.swift in Sources */,
 				A623F4E51C8DFEAA002B5893 /* Constants.swift in Sources */,
 				A623F4E71C8E02F3002B5893 /* MaterialButton.swift in Sources */,
