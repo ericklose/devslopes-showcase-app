@@ -27,6 +27,7 @@
 		A623F4F01C8F6572002B5893 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A623F4ED1C8F6572002B5893 /* FBSDKLoginKit.framework */; };
 		A63D07CC1C90C73200789F05 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63D07CB1C90C73200789F05 /* FeedVC.swift */; };
 		A63D07CE1C90C7F800789F05 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63D07CD1C90C7F800789F05 /* PostCell.swift */; };
+		A63D07D01C90FCBD00789F05 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63D07CF1C90FCBD00789F05 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		A623F4ED1C8F6572002B5893 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A63D07CB1C90C73200789F05 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A63D07CD1C90C7F800789F05 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		A63D07CF1C90FCBD00789F05 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		ACA873A08C1CCCC19B07C2F1 /* Pods-devslopes-showcase-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-showcase-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-showcase-app/Pods-devslopes-showcase-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 		A623F4D71C8DFC0B002B5893 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A63D07CF1C90FCBD00789F05 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				A623F4C41C8DFB8F002B5893 /* AppDelegate.swift in Sources */,
 				A623F4E51C8DFEAA002B5893 /* Constants.swift in Sources */,
 				A623F4E71C8E02F3002B5893 /* MaterialButton.swift in Sources */,
+				A63D07D01C90FCBD00789F05 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
