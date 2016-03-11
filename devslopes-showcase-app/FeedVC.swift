@@ -17,6 +17,7 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIIm
     @IBOutlet weak var imageSelectorImage: UIImageView!
     
     var posts = [Post]()
+    var imageSelected = false
     
     var imagePicker: UIImagePickerController!
     
@@ -39,7 +40,7 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIIm
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
                 
                 for snap in snapshots {
-
+                    
                     
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
@@ -102,6 +103,7 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIIm
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         imageSelectorImage.image = image
+        imageSelected = true
     }
     
     @IBAction func selectImage(sender: UITapGestureRecognizer) {
@@ -112,7 +114,7 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIIm
         
         if let txt = postField.text where txt != "" {
             
-            if let img = imageSelectorImage.image {
+            if let img = imageSelectorImage.image /*where imageSelected == true*/ {
                 let urlStr = "https://post.imageshack.us/upload_api.php"
                 let url = NSURL(string: urlStr)!
                 let imgData = UIImageJPEGRepresentation(img, 0.2)!
@@ -134,6 +136,7 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIIm
                                     
                                     if let links = info["links"] as? Dictionary<String, AnyObject> {
                                         if let imgLink = links["image_link"] as? String {
+                                            self.postToFirebase(imgLink)
                                         }
                                     }
                                     
@@ -143,9 +146,40 @@ class FeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIIm
                             print(error)
                         }
                 }
+            } else {
+                print("hi")
+                self.postToFirebase(nil)
             }
             
         }
     }
     
+    func postToFirebase(imgUrl: String?) {
+        
+        var post: Dictionary<String, AnyObject> = [
+            "description": postField.text!,
+            "likes": 0
+        ]
+        
+        if imgUrl != nil {
+            post["imageUrl"] = imgUrl!
+        }
+        
+        let firebasePost = DataService.ds.REF_POST.childByAutoId()
+        firebasePost.setValue(post)
+        
+        postField.text = ""
+        imageSelectorImage.image = UIImage(named: "camera")
+        imageSelected = false
+        
+        tableView.reloadData()
+    }
+    
 }
+
+
+
+
+
+
+
